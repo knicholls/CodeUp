@@ -11,3 +11,11 @@
 #else:
 #    print("You are a Senior ")
 
+#number 1
+#if True and False = False
+#number 2
+#if not false and not (true and False) = True
+#number 3
+#if not (True or False) and False and not False = False
+
+
