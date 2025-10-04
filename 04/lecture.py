@@ -24,4 +24,19 @@
 #for i in range(5, 0, -1):
 #    print(i)
 
+#t = "CodeUp"
+#for i in t:
+#    print(i)
+
+#t = "CodeUp"
+#for i in range(len(t)):
+#    print(t[i])
+
+#word = str(input("Enter a Word: "))
+#char1 = str(input("Enter a Character: "))
+#num = 0
+#for i in range(len(word)):
+#    if char1 == word[i]:
+#        num+= 1
+#print(f"How mant times doea it appear: {num}")
 
