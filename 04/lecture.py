@@ -40,3 +40,20 @@
 #        num+= 1
 #print(f"How mant times doea it appear: {num}")
 
+import random
+#generate a number form 1 to 6
+#user starts with 0 points
+diceroll  = 0
+player_score  = 0
+
+#while not diceroll == 1 and player_score < 5:
+#    input("Please press enter")
+#    diceroll =random.randint(1,7)
+#    if diceroll == 1:
+#        print(f"The game is over and you have lost")
+#        print (f"Your final score is  {player_score}")
+#    else:
+#
+#        print("The final score is {player_score}")
+
+
