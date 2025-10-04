@@ -56,4 +56,10 @@ player_score  = 0
 #
 #        print("The final score is {player_score}")
 
+#num = int(input("Please enter a number: "))
+#word = str(input("Please enter a word: "))
+#for i in range word:
+#    for j in range num:
+#        print(i, end=" ")
+
 
