@@ -18,4 +18,10 @@
 #number 3
 #if not (True or False) and False and not False = False
 
+#For i in range(5):
+#    print("Hello World")
+
+#for i in range(5, 0, -1):
+#    print(i)
+
 
