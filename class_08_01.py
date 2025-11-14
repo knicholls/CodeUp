@@ -5,7 +5,7 @@ import random
 
 pygame.init()
 screen = pygame.display.set_mode((800, 800))
-pygame.display.set_caption("Game Window")
+pygame.display.set_caption("Tic Tac Toe")
 
 font = pygame.font.Font( 'freesansbold.ttf', 50)
 small_font = pygame.font.Font( 'freesansbold.ttf', 20)
@@ -39,3 +39,9 @@ while True:
     screen.blit(text_reset, text_reset_rect)
 
     pygame.display.update()
+
+    class Board:
+        def __init__(self):
+            self.board_values = [["0","0","0"],
+                                ["0","0","0"],
+                                ["0","0","0"]]
