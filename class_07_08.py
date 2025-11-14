@@ -3,7 +3,6 @@ import sys
 import pygame
 
 pygame.font.init()
-S
 x = 600
 y = 350
 
