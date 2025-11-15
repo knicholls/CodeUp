@@ -74,6 +74,15 @@ class Board:
             x = collided % 3
             y = collided // 3
             return x,y
+        
+        def is_empty_square(self, x, y):
+            return self.board_values[x][y] == "0"
+        
+        def switch_move(self):
+            if self.current_move == "X":
+                self.current_move = "O"
+            else:    
+                self.current_move = "X"
 
 BOARD = Board()
 clear_button_rect = pygame.Rect(300, 50, 200, 75)
