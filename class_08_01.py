@@ -17,10 +17,6 @@ class Cordinate:
         self.x = x
         self.y = y
 
-####### BOARD = Board()
-clear_button_rect = pygame.Rect(300, 50, 200, 75)
-mode_button_rect = pygame.Rect(575, 50, 175, 75)
-
 class Board:
     def __init__(self):
         self.board_values = [["0","0","0"],
@@ -49,15 +45,15 @@ class Board:
         self.generate_computer_movers = False
 
     def draw_board(self, surface):
-            white = (255,255,255)
-            pygame.draw.line(surface, white,
-                            (200 + 133, 200), (200 + 133, 600))
-            pygame.draw.line(surface, white,
-                            (200 + 133 + 134, 200), (200 + 133 + 134, 600)) 
-            pygame.draw.line(surface, white,
-                            (200, 200 + 133), (600, 200 + 133))
-            pygame.draw.line(surface, white,
-                            (200, 200 + 133 + 134), (600, 200 + 133 + 134))
+        white = (255,255,255)
+        pygame.draw.line(surface, white,
+                        (200 + 133, 200), (200 + 133, 600))
+        pygame.draw.line(surface, white,
+                        (200 + 133 + 134, 200), (200 + 133 + 134, 600)) 
+        pygame.draw.line(surface, white,
+                        (200, 200 + 133), (600, 200 + 133))
+        pygame.draw.line(surface, white,
+                        (200, 200 + 133 + 134), (600, 200 + 133 + 134))
 
 BOARD = Board()
 clear_button_rect = pygame.Rect(300, 50, 200, 75)
@@ -66,17 +62,16 @@ mode_button_rect = pygame.Rect(575, 50, 175, 75)
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            
+            pygame.quit()        
     screen.fill((0,0,0))
     BOARD.draw_board(screen)
 
-   # Replaced with .draw_board function 
-   # white = ((255,255,255))
-   # pygame.draw.line(screen, white, (200 + 133, 200),(200 +133, 600))    
-   # pygame.draw.line(screen, white, (200 + 133 + 134, 200),(200 + 133 +134, 600))   
-   # pygame.draw.line(screen, white, (200, 200 + 133),(600, 200 + 133))   
-   # pygame.draw.line(screen, white, (200, 200 + 133 + 134),(600, 200 + 133 + 134))   
+    # Replaced with .draw_board function 
+    # white = ((255,255,255))
+    # pygame.draw.line(screen, white, (200 + 133, 200),(200 +133, 600))    
+    # pygame.draw.line(screen, white, (200 + 133 + 134, 200),(200 + 133 +134, 600))   
+    # pygame.draw.line(screen, white, (200, 200 + 133),(600, 200 + 133))   
+    # pygame.draw.line(screen, white, (200, 200 + 133 + 134),(600, 200 + 133 + 134))   
 
     clear_board_button = pygame.draw.rect(screen, (255,0,0),clear_button_rect)
     text_reset = font.render("Reset", True, (255,255,255))
