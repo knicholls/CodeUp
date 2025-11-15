@@ -84,14 +84,33 @@ class Board:
             else:    
                 self.current_move = "X"
 
+        def place_marker(self, x,y):
+            self.board_values[x][y] = self.current_move
+            self.swithch_move()
+
+        def clear_board(self):
+            self.board_values = [["0", "0", "0"],
+                                ["0", "0", "0"],
+                                ["0", "0", "0"]]
+            self.game.over = False
+            self.current_move = "X"
+
 BOARD = Board()
 clear_button_rect = pygame.Rect(300, 50, 200, 75)
 mode_button_rect = pygame.Rect(575, 50, 175, 75)
+
+mode_change_button = pygame.draw.rect(screen, (0,255,0), mode_button_rect)
+text_change_mode = small_font.render("Change Mode", True, (255,255,255))
+text_change_mode_rect = text_change_mode.get_rect()
+text_change_mode_rect.center =((575 + 575 + 175) // 2, (50 + 50 +75) // 2)
+screen.blit(text_change_mode, text_change_mode_rect)
 
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            x,y =pygame.mouse.getpos
 
     screen.fill((0, 0, 0))
     BOARD.draw_board(screen)
@@ -103,4 +122,13 @@ while True:
     text_reset_rect.center = (400, 90)
     screen.blit(text_reset, text_reset_rect)
 
+    text_move = small_font.render(f"Current move:" , {Board.current_move}, True, (255,255,255)
+    text_move_rect - text_move.get_rect()
+    text_move_rect.center =(100,100)
+    screen.blit(text_move, text_move_rect)
+
+
+
     pygame.display.flip()
+
+    # text_change_mode_rect.center = ((575 + 575 + 175) // 2, (50 + 50 + 75) // 2)
